@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import myVideo from './assets/leeyihong_hero_video.mp4';
 
 // const VIDEO_URL = "https://assets.mixkit.co/videos/preview/mixkit-abstract-technology-loop-with-blue-lights-40244-large.mp4";
@@ -32,7 +32,7 @@ const useTypewriter = (text: string, speed = 38, startDelay = 600) => {
 };
 
 export default function App() {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
   const [pillsVisible, setPillsVisible] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const prevX = useRef<number>(0);
