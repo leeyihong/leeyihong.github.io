@@ -93,7 +93,8 @@ export default function App() {
         </div>
 
 
-        {/* Navigation side */}
+        {/* Navigation side (Hidden for now) */}
+        {/*
         <div className="hidden md:flex items-center text-[20px] lg:text-[23px]">
           {["Labs", "Studio", "Openings", "Shop"].map((item, i) => (
             <React.Fragment key={item}>
@@ -107,22 +108,23 @@ export default function App() {
           Get in touch
         </a>
 
-        {/* Mobile Menu Button */}
         <button onClick={() => setIsOpen(!isOpen)} className="md:hidden flex flex-col gap-[5px] z-20" aria-label="Toggle Menu">
           <div className={`w-6 h-[2px] bg-white transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
           <div className={`w-6 h-[2px] bg-white transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`} />
           <div className={`w-6 h-[2px] bg-white transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} />
         </button>
-
+        */}
 
       </nav>
 
-      {/* MOBILE OVERLAY */}
+      {/* MOBILE OVERLAY (Hidden for now) */}
+      {/*
       <div className={`fixed inset-0 bg-black/90 backdrop-blur-md z-10 flex flex-col justify-center px-8 sm:px-12 gap-8 transition-all duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
         {["Labs", "Studio", "Openings", "Shop", "Get in touch"].map((item) => (
           <a key={item} href="#" className={`text-[32px] font-medium ${item === 'Get in touch' ? 'underline' : ''}`}>{item}</a>
         ))}
       </div>
+      */}
 
       {/* HERO CONTENT */}
       <section className="relative z-10 h-screen flex flex-col justify-center px-8 sm:px-12 md:px-16 lg:px-20">
@@ -140,16 +142,43 @@ export default function App() {
           </p>
 
           <div className={`flex flex-wrap gap-y-1 transition-all duration-500 ${pillsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
-            {["Pitch me an idea", "Come work with me", "Buy me a Kopi (Coffee)", "See how I operate"].map(btn => (
-              <button key={btn} className="bg-white text-black border border-black/10 rounded-full text-[13px] sm:text-[15px] px-4 sm:px-5 py-[0.3em] mx-[0.2em] mb-[0.4em] hover:bg-black hover:text-white transition-colors">
-                {btn}
-              </button>
-            ))}
+            <a
+              href="https://g.dev/leeyihong"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center bg-white text-black border border-black/10 rounded-full text-[13px] sm:text-[15px] px-4 sm:px-5 py-[0.3em] mx-[0.2em] mb-[0.4em] hover:bg-black hover:text-white transition-colors"
+            >
+              My Developer Profile
+            </a>
+            <a
+              href="https://www.linkedin.com/in/leeyihong/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center bg-white text-black border border-black/10 rounded-full text-[13px] sm:text-[15px] px-4 sm:px-5 py-[0.3em] mx-[0.2em] mb-[0.4em] hover:bg-black hover:text-white transition-colors"
+            >
+              Come work with me
+            </a>
+            <a
+              href="https://www.paypal.com/paypalme/leeyihong"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center bg-white text-black border border-black/10 rounded-full text-[13px] sm:text-[15px] px-4 sm:px-5 py-[0.3em] mx-[0.2em] mb-[0.4em] hover:bg-black hover:text-white transition-colors"
+            >
+              Buy me a Kopi (Coffee)
+            </a>
+            <a
+              href="https://www.linkedin.com/in/leeyihong/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center bg-white text-black border border-black/10 rounded-full text-[13px] sm:text-[15px] px-4 sm:px-5 py-[0.3em] mx-[0.2em] mb-[0.4em] hover:bg-black hover:text-white transition-colors"
+            >
+              See how I operate
+            </a>
             <button
               onClick={() => { navigator.clipboard.writeText("yunotechai@gmail.com"); alert("Copied!"); }}
               className="bg-transparent text-white border border-white rounded-full text-[13px] sm:text-[15px] px-4 sm:px-5 py-[0.3em] mx-[0.2em] mb-[0.4em] flex items-center gap-2 hover:bg-white hover:text-black transition-colors"
             >
-              Reach us: <span className="underline">yunotechai@gmail.com</span>
+              Reach me: <span className="underline">'MY FULL NAME'@gmail.com</span>
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor"><path d="M8 2H2V8H8V2Z" /><path d="M10 4V10H4" /></svg>
             </button>
           </div>
